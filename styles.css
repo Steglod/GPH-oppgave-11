@@ -1,0 +1,184 @@
+/* -- VARIABLES --  */
+:root {
+  /* Farge variabler */
+  --primaryColor: #fcc388ff; /* Peach */
+  --secondaryColor: #ffc5c9ff; /* Tea rose red*/
+  --accentColor: #ffffd1ff; /* Cream */
+  --accentColorTwo: #fee5d0ff; /* Champagne pink*/
+  --accentColorThree: #fff6edff; /* Seashell */
+
+  /* Størrelse variabler */
+  --tinySpace: 3px;
+  --smallSpace: 8px;
+  --mediumSpace: 16px;
+  --largeSpace: 24px;
+  --fullScreen: 100vh;
+
+  /* Skrift variabler */
+  --fontHead: 'Audiowide';
+  --fontText: 'Underdog';
+  --fontSize: 18px;
+}
+
+/* -- GLOBAL -- */
+body {
+  background-color: var(--primaryColor);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  font-family: var(--fontHead);
+}
+
+h2 {
+  font-family: var(--fontHead);
+}
+
+label {
+  font-family: var(--fontText);
+  font-size: 20px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+p {
+  font-family: var(--fontText);
+  font-size: 20px;
+}
+
+.button {
+  font-family: var(--fontHead);
+  width: 300px;
+  height: 200px;
+  border: solid;
+  border-radius: 20%;
+
+}
+option {
+  font-family: var(--fontText);
+  font-size: 20px;
+}
+
+select {
+  font-family: var(--fontText);
+  font-size: 20px;
+}
+
+/* -- HEADER -- */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--mediumSpace);
+  border-bottom: 3px solid var(--primaryColor);
+  position: sticky;
+  top: 0;
+  background-color: var(--secondaryColor);
+}
+
+.logo {
+  height: 32px;
+  width: 32px;
+  background-color: var(--secondaryColor);
+}
+
+/* NAV */
+.navList {
+  display: flex;
+  gap: var(--mediumSpace);
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+/* -- MAIN -- */
+.section {
+  min-height: 100vh;
+}
+
+/* Hero */
+.sectionHero {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.heroHeading {
+  width: 50%;
+  text-align: center;
+}
+
+.heroIntro {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.heroParagraph {
+  text-align: center;
+}
+
+.heroImg {
+  max-width: 50%;
+}
+
+/* Gallery */
+.sectionGallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* Delete */
+
+.sectionDelete {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.deleteButton {
+  background-color: var(--accentColorThree);
+  transition: 4s;
+}
+.deleteButton:hover {
+  background-color: red;
+}
+
+/* FOOTER */
+/* -- FOOTER -- */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid var(--primaryColor);
+  padding: var(--mediumSpace);
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--smallSpace);
+  color: var(--primaryColor);
+}
+
+.hidden {
+  display: none;
+}
+
+/* -- MEDIA -- */
+@media (max-width: 426px) {
+  .heroIntro,
+  .aboutIntro {
+    flex-direction: column;
+    gap: var(--mediumSpace);
+    padding: var(--mediumSpace);
+  }
+}
