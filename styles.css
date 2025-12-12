@@ -95,8 +95,8 @@ header {
 /* Cat */
 .catSection, .yoMamaSection, .holidaySection {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr ;
   padding-left: 20px;
 }
   
@@ -130,10 +130,10 @@ header {
 
 /* -- MEDIA -- */
 @media (max-width: 426px) {
-  .heroIntro,
-  .aboutIntro {
-    flex-direction: column;
-    gap: var(--mediumSpace);
-    padding: var(--mediumSpace);
-  }
+  .catSection {
+    display: grid;
+    grid-template-columns: auto;
+  grid-template-rows: auto;
+  padding-left: 20px;
 }
+  }
